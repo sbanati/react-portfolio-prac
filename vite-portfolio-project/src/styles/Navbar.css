@@ -1,34 +1,91 @@
- 
-  
-/* Remove default list styles */
-   nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+/* Structural styles */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Style applied to each list item */
-nav li {
-    display: inline-block;
-    margin-right: 20px; /* Adjust spacing between navigation items */
-  }
+.Navbar ul {
+  display: flex;
+  list-style-type: none;
+}
 
-/* Styles applied to the anchors in the nav section */
-   nav a {
-    color: #2d2e32;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1.7rem;
-    padding: 10px 20px 10px 20px;
-    width: 100%;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    
-  }
-/* Style applied to the nav anchors for mouse over */
+.Navbar li {
+  /* display: inline-block; */
+  margin-right: 20px;
+}
+
+/* Presentational styles */
+.Navbar a {
+  color: #2d2e32;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1.7rem;  
+  padding: 10px 20px;
+  width: 100%;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Style applied to mouse over event */
   nav a:hover {
     color:var(--head-blue)
   }
   
 
+/* Style for the icon element */
+#bar {
+  color: #2d2e32; /* Same color as other navigation items */
+  font-size: 1.7rem; /* Same font size as other navigation items */
+  padding: 10px 20px; /* Same padding as other navigation items */
+  margin-left: auto; /* Move the icon to the end of the row */
+  cursor: pointer; /* Add pointer cursor for better usability */
+}
+
+/* Style for hover effect on the icon */
+#bar:hover {
+  color: var(--head-blue); /* Same hover color as other navigation items */
+}
+
+#hamburger-mobile i {
+  color: var(--black-font); 
+}
+
+#hamburger-mobile {
+  display: none; 
+}
+
+@media screen and (max-width: 769px) {
+    /* Styles for adjusting layout */
+    .Navbar ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: right;
+      position: fixed;
+      top: 90px;
+      right: 0px;
+      width: 300px;
+      height: 100vh;
+      background-color: var(--border-color);
+    }
+
+    #hamburger-mobile {
+      display: block; 
+    }
+
+    .Navbar li {
+      
+      margin-bottom: 25px;
+    }
+
+    #hamburger-mobile i {
+      font-size: 24px; 
+      cursor: pointer;
+    }
   
+    
+  }
+
+
+
